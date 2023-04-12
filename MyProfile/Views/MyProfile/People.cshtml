@@ -1,0 +1,28 @@
+﻿@model List<dynamic>
+
+@{
+    ViewData["Title"] = "People";
+}
+
+<div class="text-center">
+    <h1 class="display-4">People List</h1>
+</div>
+<hr />
+<table class="table table-info table-striped">
+    <thead>
+        <tr>
+            <th>Fullname</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var people in Model)
+        {
+            <tr>
+                <td>@people.Fullname</td>
+                <td>@people.Address</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
